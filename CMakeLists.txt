@@ -10,9 +10,3 @@ include_directories(${GTEST_INCLUDE_DIRS})
 # Link runTests with what we want to test and the GTest and pthread library
 add_executable(runTests tests.cpp)
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
-
-# Set output directory for the executable
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
-
-# Rename the executable to test.xml
-set_target_properties(runTests PROPERTIES OUTPUT_NAME "test.xml")
